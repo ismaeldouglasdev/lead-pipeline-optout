@@ -32,12 +32,12 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# Only allow requests with a known Host header.
+# Only allow requests with a known Host header (Starlette >= 1.x: `*.domain` wildcard).
 allowed_hosts = [
     "localhost",
     "127.0.0.1",
-    ".onrender.com",
-    ".ismaeltech.com",
+    "*.onrender.com",
+    "*.ismaeltech.com",
 ]
 app.add_middleware(TrustedHostMiddleware, allowed_hosts=allowed_hosts)
 
