@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Env / secrets
+.env
+*.pem
+
+# Local DB (dev only)
+*.db
+*.sqlite3
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
